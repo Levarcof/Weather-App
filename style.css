@@ -52,13 +52,14 @@ align-items: center;
 
 .temp {
     margin: 20px;
+    margin-top: 65px;
     display: flex;
     width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 2px;
+    gap: 20px;
 
 }
 
@@ -74,9 +75,18 @@ align-items: center;
 .btn{
       padding: 4px;
     font-size: medium;
-    background-color: white;
+      background-color: white;
+    opacity: 0.6;
+    border: 2px ;
+    outline: none;
     width: 5rem;
     border-radius: 1rem;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: white;
+    opacity: 1;
+
 }
 .tempInfo h1{
     font-size: 90px;

@@ -15,7 +15,7 @@ const apiKey = "1fb8efbbc9204388948164935252407";
 // let temp;
 async function fetchData() {
   try {
-    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`);
+    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`);
     const data = await response.json();
     city = data.location.name
     temperature = data.current.temp_c;

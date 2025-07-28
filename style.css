@@ -52,14 +52,14 @@ align-items: center;
 
 .temp {
     margin: 20px;
-    margin-top: 65px;
+    margin-top: 40px;
     display: flex;
     width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 20px;
+    gap: 40px;
 
 }
 

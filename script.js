@@ -9,13 +9,13 @@ let localtime = "none";
 let pressure = "none";
 
 let region = "none"
-// const apiKey = "548f6b28352174a097c7f2c3726aa542";
+const apiKey = "1fb8efbbc9204388948164935252407";
 
 
 // let temp;
 async function fetchData() {
   try {
-    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=1fb8efbbc9204388948164935252407&q=${city}&aqi=no`);
+    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`);
     const data = await response.json();
     city = data.location.name
     temperature = data.current.temp_c;
@@ -44,11 +44,14 @@ async function fetchData() {
 }
 fetchData();
 btn.addEventListener("click", () => {
-  city = c.value
-  fetchData();
-
-
-
+  city = c.value.trim();
+  if(city == ""){
+    alert("Please Enter City before clicking Get button")
+  }
+  else{
+     fetchData();
+  }
+ 
 })
 
 
